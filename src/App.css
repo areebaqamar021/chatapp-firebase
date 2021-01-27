@@ -9,7 +9,7 @@ body {
 }
 
 .App header {
-  background-color: #181717;
+  background-color:rgb(32, 32, 51);
   height: 10vh;
   min-height: 50px;
   color: white;
@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+  background-color:#c7c7c7;
 }
 
 main {
@@ -67,7 +67,7 @@ form {
 
 form button {
   width: 20%;
-  background-color: rgb(56, 56, 143);
+  background-color: rgb(32, 32, 51);
 }
 
 
@@ -101,10 +101,16 @@ button:disabled {
 
 
 .sign-in {
-  color: #282c34;
-  background: white;
+  color: #131a29;
+  background: rgb(250, 245, 245);
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 50px;
+}
+
+.sign-out {
+  color: #131a29;
+  background: rgb(250, 245, 245);
 }
 
 
@@ -124,7 +130,7 @@ p {
   padding: 10px 20px;
   border-radius: 25px;
   position: relative;
-  color: white;
+  color: rgb(17, 16, 16);
   
 }
 
@@ -140,7 +146,7 @@ p {
 
 .sent p {
   color: white;
-  background: #0b93f6;
+  background: #2b2a3b;
   align-self: flex-end;
 }
 .received p {
