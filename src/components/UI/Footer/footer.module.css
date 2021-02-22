@@ -23,7 +23,7 @@
 }
 
 .TextLink {
-	color: #724cf9 !important;
+	color: #ff1111 !important;
 	margin: 8px 0px;
 	font-weight: 500;
 	position: relative;
@@ -33,7 +33,7 @@
 
 .TextLink::after {
 	content: "";
-	background-color: #724cf9;
+	background-color: #ff1111;
 	height: 2px;
 	width: 0;
 	position: absolute;
