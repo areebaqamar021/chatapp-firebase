@@ -1,4 +1,4 @@
-# React Ecommerce
+# React firebase
 
 ## Built With
 
