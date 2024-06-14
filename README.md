@@ -15,7 +15,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/jawariaalvi32/React-ecommerce
+   git clone (https://github.com/areebaqamar021/react-firebase.git)
    ```
 2. Install NPM packages
    ```sh
