@@ -1,1 +1,1 @@
-# React firebase Ecommerce
+# Chat App with React, Redux & Firebase
