@@ -1,4 +1,3 @@
-// src/components/Chat.js
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { db } from '../firebaseConfig';
