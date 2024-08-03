@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#firebase config file
+/src/firebaseConfig.js
+
 # production
 /build
 
