@@ -1,8 +1,7 @@
-// src/components/Auth.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../features/userSlice';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 
 const Auth = () => {
