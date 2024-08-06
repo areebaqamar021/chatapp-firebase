@@ -18,7 +18,7 @@ const Auth = () => {
       } else {
         userCredential = await signInWithEmailAndPassword(auth, email, password);
       }
-      dispatch(setUser(userCredential.user));
+      dispatch(setUser({ uid: userCredential.user.uid, email: userCredential.user.email }));
     } catch (error) {
       console.error('Authentication Error:', error);
     }

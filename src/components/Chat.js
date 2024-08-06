@@ -1,11 +1,11 @@
 // src/components/Chat.js
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useAuth } from '../contexts/AuthContext';
 import { db } from '../firebaseConfig';
 import { collection, query, onSnapshot, orderBy, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const Chat = () => {
-  const user = useSelector((state) => state.user);
+  const { currentUser, logout } = useAuth();
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [messages, setMessages] = useState([]);
@@ -16,7 +16,7 @@ const Chat = () => {
     const unsubscribeUsers = onSnapshot(usersQuery, (querySnapshot) => {
       const usersData = [];
       querySnapshot.forEach((doc) => {
-        usersData.push(doc.data());
+        usersData.push({ uid: doc.id, ...doc.data() });
       });
       setUsers(usersData);
     });
@@ -32,7 +32,7 @@ const Chat = () => {
       const unsubscribeMessages = onSnapshot(messagesQuery, (querySnapshot) => {
         const messagesData = [];
         querySnapshot.forEach((doc) => {
-          messagesData.push(doc.data());
+          messagesData.push({ id: doc.id, ...doc.data() });
         });
         setMessages(messagesData);
       });
@@ -41,23 +41,33 @@ const Chat = () => {
   }, [selectedUser]);
 
   const handleSendMessage = async () => {
-    if (message.trim() && user) {
+    if (message.trim() && currentUser && selectedUser) {
       try {
+        console.log('Sending message:', message);
         await addDoc(collection(db, 'messages', selectedUser.uid, 'chat'), {
           text: message,
-          uid: user.uid,
+          uid: currentUser.uid,
           createdAt: serverTimestamp(),
         });
         setMessage('');
+        console.log('Message sent successfully');
       } catch (error) {
         console.error("Error sending message: ", error);
       }
     } else {
-      console.error("User is not authenticated or message is empty");
+      if (!currentUser) {
+        console.error("User is not authenticated");
+      }
+      if (!selectedUser) {
+        console.error("No user selected");
+      }
+      if (!message.trim()) {
+        console.error("Message is empty");
+      }
     }
   };
 
-  if (!user) {
+  if (!currentUser) {
     return (
       <div className="flex h-screen items-center justify-center bg-gray-100">
         <h2 className="text-2xl">Please log in to use the chat application.</h2>
@@ -67,16 +77,13 @@ const Chat = () => {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <div className="w-1/4 bg-gray-800 text-white p-4">
         <h2 className="text-xl font-bold mb-4">SNAPPY</h2>
         <div className="space-y-2">
           {users.map((u) => (
             <div
               key={u.uid}
-              className={`flex items-center p-2 cursor-pointer rounded ${
-                selectedUser?.uid === u.uid ? 'bg-gray-700' : ''
-              }`}
+              className={`flex items-center p-2 cursor-pointer rounded ${selectedUser?.uid === u.uid ? 'bg-gray-700' : ''}`}
               onClick={() => setSelectedUser(u)}
             >
               <img
@@ -88,9 +95,14 @@ const Chat = () => {
             </div>
           ))}
         </div>
+        <button
+          onClick={logout}
+          className="w-full mt-4 p-2 bg-red-500 text-white rounded hover:bg-red-600"
+        >
+          Logout
+        </button>
       </div>
 
-      {/* Chat Area */}
       <div className="w-3/4 bg-gray-900 text-white flex flex-col">
         <div className="flex items-center p-4 bg-gray-800">
           <img
@@ -102,17 +114,8 @@ const Chat = () => {
         </div>
         <div className="flex-1 p-4 overflow-y-scroll">
           {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`flex ${
-                msg.uid === user?.uid ? 'justify-end' : 'justify-start'
-              }`}
-            >
-              <div
-                className={`max-w-xs p-2 rounded-lg ${
-                  msg.uid === user?.uid ? 'bg-blue-500' : 'bg-gray-700'
-                }`}
-              >
+            <div key={msg.id || index} className={`flex ${msg.uid === currentUser?.uid ? 'justify-end' : 'justify-start'}`}>
+              <div className={`max-w-xs p-2 rounded-lg ${msg.uid === currentUser?.uid ? 'bg-blue-500' : 'bg-gray-700'}`}>
                 <p>{msg.text}</p>
               </div>
             </div>
