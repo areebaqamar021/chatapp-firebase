@@ -39,7 +39,8 @@ Ensure you have the following installed:
    Using npm:
    ```bash
    npm install
-```
+   ```
    Or using yarn:
+   
    ```bash
    yarn install
