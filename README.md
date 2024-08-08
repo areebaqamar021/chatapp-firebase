@@ -59,7 +59,7 @@ Ensure you have the following installed:
    
    ```bash
    npm run dev
-    ```
+   ```
 
    Or using yarn:
    
