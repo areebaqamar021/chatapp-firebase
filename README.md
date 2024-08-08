@@ -33,3 +33,14 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/areebaqamar021/chatapp-firebase.git
    cd chatapp-firebase
+
+2. **Install dependencies:**
+
+   Using npm:
+   ```bash
+   npm install
+
+   Or using yarn:
+   yarn install
+
+
