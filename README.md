@@ -41,6 +41,7 @@ Ensure you have the following installed:
    npm install
 
    Or using yarn:
+   ```bash
    yarn install
 
 
