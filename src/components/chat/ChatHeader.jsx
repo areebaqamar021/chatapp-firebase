@@ -3,7 +3,7 @@ import { FaUserPlus } from "react-icons/fa";
 import photo from "../../assets/images/defaultPhoto.jpg";
 
 export const ChatHeader = ({ photoURL, displayName }) => (
-  <div className="h-20 max-sm:h-12 bg-amber-950 text-white flex justify-between items-center p-4 sm:p-2">
+  <div className="h-20 max-sm:h-12 bg-sky-950 text-white flex justify-between items-center p-4 sm:p-2">
     <div className="flex items-center space-x-4">
       <img
         src={photoURL || photo}
@@ -16,9 +16,9 @@ export const ChatHeader = ({ photoURL, displayName }) => (
     </div>
 
     <div className="flex text-3xl space-x-4">
-      <BsCameraVideoFill className="cursor-pointer hover:text-sky-200 duration-150 max-sm:h-8 max-sm:w-8" />
-      <FaUserPlus className="cursor-pointer hover:text-sky-200 duration-150 max-sm:h-8 max-sm:w-8" />
-      <BsThreeDots className="cursor-pointer hover:text-sky-200 duration-150 max-sm:h-8 max-sm:w-8" />
+      <BsCameraVideoFill className="cursor-pointer hover:text-slate-200 duration-150 max-sm:h-8 max-sm:w-8" />
+      <FaUserPlus className="cursor-pointer hover:text-slate-200 duration-150 max-sm:h-8 max-sm:w-8" />
+      <BsThreeDots className="cursor-pointer hover:text-slate-200 duration-150 max-sm:h-8 max-sm:w-8" />
     </div>
   </div>
 );

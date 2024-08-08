@@ -76,7 +76,7 @@ const ChatInput = ({ scrollRef }) => {
           onChange={(e) => setImageFile(e.target.files[0])}
         />
         <IoIosAttach className="h-6 w-6 cursor-pointer hover:text-slate-600" />
-        <Button onClick={handleSubmit} className="bg-sky-400" text="Send" />
+        <Button onClick={handleSubmit} className="bg-sky-950" text="Send" />
       </div>
     </div>
   );
