@@ -56,9 +56,11 @@ Ensure you have the following installed:
 ### Run the application:
 
    Using npm:
+   
    ```bash
    npm run dev
     ```
+
    Or using yarn:
    
    ```bash
