@@ -24,7 +24,7 @@ const Chat = () => {
         <div className="flex flex-col justify-center items-center h-full text-2xl sm:text-xl p-8">
           <AiOutlineMessage size={220} className="text-gray-500 mb-3" />
           <p className="text-gray-600">
-            Bir arkadaşına veya gruba gizli fotoğraflar ve mesajlar gönder
+            Send your photos and messages to a friend or group
           </p>
         </div>
       )}

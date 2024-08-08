@@ -50,9 +50,9 @@ const Register = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-400 to-sky-300 min-h-screen flex items-center justify-center">
+    <div className="relative bg-sky-950 min-h-screen flex items-center justify-center">
       {isPending && <LoadingSpin className="absolute" />}
-      <div className="bg-white py-8 px-12 rounded-lg flex flex-col gap-6 items-center shadow-lg">
+      <div className="bg-stone-300 py-8 px-12 rounded-lg flex flex-col gap-6 items-center shadow-lg">
         <h1 className="text-neutral-800 font-bold text-4xl">Logo</h1>
         <h4 className="text-neutral-700 text-lg">Register</h4>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
@@ -63,14 +63,14 @@ const Register = () => {
           <input id="file" className="hidden" type="file" />
           <label
             htmlFor="file"
-            className="flex items-center space-x-4 cursor-pointer p-4 text-sky-600/60 hover:brightness-150 duration-150"
+            className="flex items-center space-x-4 cursor-pointer p-4 text-sky-900 hover:brightness-150 duration-150"
           >
             <LuImagePlus size={48} />
             <span>Update Profile Image</span>
           </label>
 
           <Button
-            className="bg-sky-600/80 disabled:bg-slate-300"
+            className="bg-sky-900 disabled:bg-slate-300"
             text="Sign Up"
             disabled={isPending}
           />
@@ -79,7 +79,7 @@ const Register = () => {
           Already have an account?{" "}
           <Link
             to="/login"
-            className="text-sky-500 hover:text-sky-800 duration-150"
+            className="text-sky-700 hover:text-sky-950 duration-150"
           >
             Login
           </Link>

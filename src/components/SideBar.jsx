@@ -12,7 +12,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="relative sm:basis-1/3 max-sm:w-14 bg-gradient-to-b from-amber-950 to-amber-800 text-white rounded-r-none p-4 max-sm:p-0 ">
+    <div className="relative sm:basis-1/3 max-sm:w-14 bg-sky-950 text-white rounded-r-none p-4 max-sm:p-0 ">
       <Navbar />
       <Search />
       <ChatList />

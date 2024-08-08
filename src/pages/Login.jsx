@@ -30,9 +30,9 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-400 to-sky-300 min-h-screen flex items-center justify-center">
+    <div className="bg-sky-950 min-h-screen flex items-center justify-center">
       {isPending && <LoadingSpin className="absolute" />}
-      <div className="bg-white py-8 px-10 rounded-lg shadow-lg flex flex-col gap-4 items-center">
+      <div className="bg-stone-300 py-8 px-10 rounded-lg shadow-lg flex flex-col gap-4 items-center">
         <h1 className="text-neutral-800 font-bold text-4xl mb-4">Logo</h1>
         <h4 className="text-neutral-700 text-lg mb-6">Login</h4>
         <form
@@ -42,15 +42,15 @@ const Login = () => {
           <Input placeholder="Email" type="email" />
           <Input placeholder="Password" type="password" />
           <Button
-            className="bg-blue-500 hover:bg-blue-600 text-white"
+            className="bg-sky-900 disabled:bg-slate-300 text-white"
             text="Sign In"
           />
         </form>
         <p className="mt-4 text-neutral-700">
-          Don't have an account?{" "}
+            Don't have an account?{" "}
           <Link
             to="/register"
-            className="text-sky-500 hover:text-sky-800 duration-150"
+            className="text-sky-700 hover:text-sky-950 duration-150"
           >
             Register
           </Link>
