@@ -14,10 +14,10 @@ dist-ssr
 *.local
 
 #firebase
-# /src/Firebase/config.js 
-# /src/Firebase/cors.json
-# /src/Firebase/firestore.indexes.json
-# /src/Firebase/firestore.rules
+/src/Firebase/config.js 
+/src/Firebase/cors.json
+/src/Firebase/firestore.indexes.json
+/src/Firebase/firestore.rules
 
 # Editor directories and files
 .vscode/*
