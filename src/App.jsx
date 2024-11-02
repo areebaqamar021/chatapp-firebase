@@ -3,8 +3,9 @@ import './App.css'
 function App() {
   return (
     <>
-      <div>
-      </div>
+     <div className="bg-blue-500 text-white p-4 rounded">
+      Hello, Tailwind CSS!
+    </div>
     </>
   )
 }
