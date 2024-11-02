@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Chat App in progress
+    <div className="flex items-center justify-center h-screen bg-blue-500">
+      <h1 className="text-white text-3xl font-bold">Hello, Tailwind CSS!</h1>
     </div>
   );
 }
