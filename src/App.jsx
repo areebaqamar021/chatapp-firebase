@@ -1,13 +1,7 @@
-import './App.css'
-
-function App() {
+const App = () => {
   return (
-    <>
-     <div>
-        Chat App
-    </div>
-    </>
+    <div className=''>App</div>
   )
 }
 
-export default App;
+export default App
