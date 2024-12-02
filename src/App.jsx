@@ -1,15 +1,13 @@
-import Chat from "./components/chat/Chat"
-import Detail from "./components/detail/Detail"
-import List from "./components/list/List"
+import { Toaster } from "react-hot-toast";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className='container'>
-        <List/>
-        <Chat />
-        <Detail />
-    </div>
-  )
-}
+    <>
+      <Toaster />
+      <Outlet />
+    </>
+  );
+};
 
-export default App
+export default App;
