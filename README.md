@@ -1,7 +1,5 @@
 # Chat Application 
 
-[DEMO](https://react-firebase-chat-app-vv.netlify.app/)
-
 This project is a chat application developed with React, Firebase, Tailwind and Redux., Users can sign in, register, find friends, and engage in chat conversations with the ability to share images.
 
 ## Features
@@ -18,15 +16,6 @@ This project is a chat application developed with React, Firebase, Tailwind and 
 - [Firebase](https://firebase.google.com/): Backend services for authentication and real-time database.
 - [Redux](https://redux.js.org/): State management library for React applications.
 - [Tailwind CSS](https://tailwindcss.com/)
-
-
-## Images
-
-![screencapture-localhost-5173-2024-03-01-07_11_51](https://github.com/ferhatkplnn/react-firebase-chat-app/assets/29931637/da34fc11-77d5-4020-8716-9530f620f12d)
-
-![screencapture-localhost-5173-2024-03-01-07_12_49](https://github.com/ferhatkplnn/react-firebase-chat-app/assets/29931637/036edd97-0ceb-44d8-8305-5dfc30a3567a)
-
-![screencapture-localhost-5173-register-2024-03-01-07_14_08](https://github.com/ferhatkplnn/react-firebase-chat-app/assets/29931637/67a32d98-8f3e-4b03-9d7d-2ba4db69c7d6)
 
 ## Requirements
 
