@@ -23,7 +23,7 @@ const Navbar = () => {
         />
         <span className="font-medium text-sm">{user?.displayName}</span>
         <Button
-          className="bg-white text-indigo-600 font-semibold text-sm py-1 px-4 rounded-md hover:bg-gray-100 transition-all duration-300"
+          className="bg-white text-white font-semibold text-sm py-1 px-4 rounded-md hover:bg-gray-100 transition-all duration-300"
           text="Logout"
           onClick={handleLogoutClick}
         />
