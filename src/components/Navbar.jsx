@@ -13,17 +13,17 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" max-sm:hidden flex items-center bg-black/40 rounded-r-none h-20 p-2 justify-between text-slate-50">
-      <span className="font-black text-xl flex items-center">Logo</span>
-      <div className="flex items-center gap-2">
+    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg h-16 px-6 flex items-center justify-between text-white rounded-b-md">
+      <span className="font-bold text-xl">Logo</span>
+      <div className="flex items-center gap-4">
         <img
-          className="bg-slate-50 h-8 w-8 rounded-full object-cover border-2 border-blue-500"
+          className="h-10 w-10 rounded-full object-cover border-2 border-white"
           src={user?.photoURL || photo}
-          alt="profile image"
+          alt="profile"
         />
-        <span>{user?.displayName}</span>
+        <span className="font-medium text-sm">{user?.displayName}</span>
         <Button
-          className="bg-amber-950 text-sm font-medium max-sm:absolute max-sm:top-0 max-sm:left-0 border border-amber-950 px-3 py-1 rounded "
+          className="bg-white text-indigo-600 font-semibold text-sm py-1 px-4 rounded-md hover:bg-gray-100 transition-all duration-300"
           text="Logout"
           onClick={handleLogoutClick}
         />
