@@ -13,8 +13,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 shadow-lg h-16 px-6 flex items-center justify-between text-white rounded-b-md">
-      <span className="font-bold text-xl">Logo</span>
+<div className="bg-white/20 shadow-lg h-16 px-6 flex items-center justify-between text-white rounded-md">
+<span className="font-bold text-xl">Logo</span>
       <div className="flex items-center gap-4">
         <img
           className="h-10 w-10 rounded-full object-cover border-2 border-white"

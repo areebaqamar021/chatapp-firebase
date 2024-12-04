@@ -2,7 +2,7 @@ const Input = ({ className, ...props }) => {
   return (
     <>
       <input
-        className={`${className} p-4 border-b border-neutral-300 w-96 outline-none ring-inset focus:ring-2 focus:ring-sky-400 rounded`}
+        className={`${className} p-4 border-2 border-indigo-300 w-full bg-white/80 text-gray-800 placeholder:text-gray-400 outline-none rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-400 transition-all duration-300`}
         {...props}
       />
     </>
