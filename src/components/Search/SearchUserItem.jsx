@@ -52,18 +52,20 @@ const SearchUserItem = ({ user, setSearch }) => {
 
   return (
     <div
-      className={`flex p-2 items-center gap-2 text-white hover:bg-black/40 ${
-        loading ? "opacity-50" : "hover:cursor-pointer transition"
-      } `}
+      className={`flex p-3 items-center gap-4 rounded-lg bg-white/90 shadow-sm hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:scale-105 transition-transform duration-300 ${
+        loading ? "opacity-50 pointer-events-none" : "cursor-pointer"
+      }`}
       onClick={handleUserSelection}
     >
       <img
-        className="w-12 h-12 rounded-full object-cover object-center"
+        className="w-12 h-12 rounded-full object-cover border-2 border-indigo-300 shadow-md"
         src={user?.photoURL}
-        alt=""
+        alt="User profile"
       />
       <div>
-        <span className="font-bold text-lg ">{user?.displayName}</span>
+        <span className="font-semibold text-gray-800 hover:text-white text-lg">
+          {user?.displayName}
+        </span>
       </div>
     </div>
   );
