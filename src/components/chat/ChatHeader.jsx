@@ -3,7 +3,7 @@ import { FaUserPlus } from "react-icons/fa";
 import photo from "../../assets/images/defaultPhoto.jpg";
 
 export const ChatHeader = ({ photoURL, displayName }) => (
-  <div className="h-20 max-sm:h-12 bg-indigo-500 text-white flex justify-between items-center p-4 sm:p-2 shadow-md">
+  <div className="h-20 max-sm:h-12 bg-indigo-400 text-white flex justify-between items-center p-4 sm:p-2 shadow-md">
     <div className="flex items-center space-x-4">
       <img
         src={photoURL || photo}
