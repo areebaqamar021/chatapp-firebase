@@ -10,7 +10,7 @@ const Chat = () => {
   const { currentChatUser, currentChatId } = useSelector((state) => state.chat);
 
   return (
-    <div className="w-full sm:basis-2/3 bg-gray-200">
+    <div className="w-full sm:basis-2/3 bg-white text-gray-700">
       {currentChatId ? (
         <>
           <ChatHeader
@@ -21,10 +21,10 @@ const Chat = () => {
           <ChatInput scrollRef={scrollRef} />
         </>
       ) : (
-        <div className="flex flex-col justify-center items-center h-full text-2xl sm:text-xl p-8">
-          <AiOutlineMessage size={220} className="text-gray-500 mb-3" />
-          <p className="text-gray-600">
-            Bir arkadaşına veya gruba gizli fotoğraflar ve mesajlar gönder
+        <div className="flex flex-col justify-center items-center h-full text-lg sm:text-xl p-8">
+          <AiOutlineMessage size={150} className="text-gray-400 mb-3" />
+          <p className="text-gray-500 text-center">
+            Send messages and photos to your friends.
           </p>
         </div>
       )}
