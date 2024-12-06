@@ -12,7 +12,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="relative sm:basis-1/3 max-sm:w-16 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-400 text-white rounded-r-md shadow-lg p-4 max-sm:p-0">
+    <div className="relative sm:basis-1/3 max-sm:w-16 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-400 text-white shadow-lg p-4 max-sm:p-0">
       {/* Navbar */}
       <Navbar />
       
