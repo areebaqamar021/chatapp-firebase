@@ -36,7 +36,7 @@ const Message = ({ message, arr, index }) => {
         <p
           className={`relative px-5 py-1 max-w-80 rounded-3xl flex flex-row gap-1 ${
             owner
-              ? "rounded-br-none bg-sky-300 text-gray-900"
+              ? "rounded-br-none bg-gray-300 text-gray-900"
               : "rounded-bl-none bg-gray-100 text-gray-800"
           } ${isNearEnd ? "!rounded-3xl" : "mb-2"} break-all`}
         >

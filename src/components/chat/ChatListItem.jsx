@@ -20,8 +20,8 @@ const ChatListItem = ({ user, userChatId }) => {
   return (
     <div
       onClick={handleClick}
-      className={`flex p-2 sm:p-3 items-center gap-3 text-white hover:bg-white/20 cursor-pointer transition duration-300 ${
-        isCurrentChat ? "bg-black/40" : ""
+      className={`flex p-2 sm:p-3 items-center gap-3 text-white hover:bg-white/20 cursor-pointer transition duration-300 rounded-md ${
+        isCurrentChat ? "bg-black/10" : ""
       }`}
     >
       <img
