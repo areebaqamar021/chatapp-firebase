@@ -43,19 +43,20 @@ const ChatInput = ({ scrollRef }) => {
       console.error(error);
     }
   };
+
   return (
-    <div className="bg-slate-50 h-16 px-3  flex items-center justify-center ">
+    <div className="bg-white h-16 px-3 flex items-center justify-center rounded-b-lg shadow-md">
       <form className="flex-1 h-full relative" onSubmit={handleSubmit}>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           type="text"
           placeholder="Type something"
-          className="w-full h-full outline-none bg-slate-50"
+          className="w-full h-full outline-none bg-white text-gray-700 placeholder-gray-400 rounded-md px-3 focus:ring-2 focus:ring-sky-400 focus:outline-none"
         />
         {imgFile && (
           <FaFileImage
-            className="absolute -top-4 right-4 text-slate-400"
+            className="absolute -top-4 right-4 text-gray-500"
             size={28}
           />
         )}
@@ -66,7 +67,7 @@ const ChatInput = ({ scrollRef }) => {
 
       <div className="flex items-center space-x-4">
         <label htmlFor="file" className="cursor-pointer">
-          <LuImagePlus className="h-6 w-6 hover:text-slate-600" />
+          <LuImagePlus className="h-6 w-6 text-gray-500 hover:text-gray-600" />
         </label>
         <input
           type="file"
@@ -75,8 +76,12 @@ const ChatInput = ({ scrollRef }) => {
           accept=".png,.jpg,.jpeg"
           onChange={(e) => setImageFile(e.target.files[0])}
         />
-        <IoIosAttach className="h-6 w-6 cursor-pointer hover:text-slate-600" />
-        <Button onClick={handleSubmit} className="bg-sky-400" text="Send" />
+        <IoIosAttach className="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-600" />
+        <Button
+          onClick={handleSubmit}
+          className="bg-indigo-500 hover:bg-indigo-600 text-white rounded-md"
+          text="Send"
+        />
       </div>
     </div>
   );
