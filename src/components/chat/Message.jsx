@@ -17,7 +17,7 @@ const Message = ({ message, arr, index }) => {
 
   return (
     <div
-      className={`flex gap-5 ${isNear ? "mt-0.5" : "mt-5"}   ${
+      className={`flex gap-5 ${isNear ? "mt-0.5" : "mt-5"} ${
         owner ? "flex-row-reverse" : ""
       }`}
     >
@@ -31,20 +31,20 @@ const Message = ({ message, arr, index }) => {
       <div
         className={`flex flex-col ${
           owner ? "items-end" : "items-start"
-        } gap-2 `}
+        } gap-2`}
       >
         <p
           className={`relative px-5 py-1 max-w-80 rounded-3xl flex flex-row gap-1 ${
             owner
-              ? "rounded-br-none bg-sky-400 text-white "
-              : "rounded-bl-none bg-white "
+              ? "rounded-br-none bg-sky-300 text-gray-900"
+              : "rounded-bl-none bg-gray-100 text-gray-800"
           } ${isNearEnd ? "!rounded-3xl" : "mb-2"} break-all`}
         >
           {message?.message}
           <span
-            className={`text-nowrap text-xs text-slate-500 self-end ${
-              owner ? " !text-slate-300" : ""
-            }`}
+            className={`text-nowrap text-xs ${
+              owner ? "text-slate-700" : "text-slate-500"
+            } self-end`}
           >
             {moment(message?.time).format("LT")}
           </span>
@@ -53,7 +53,7 @@ const Message = ({ message, arr, index }) => {
           <img
             src={message?.photoURL}
             alt=""
-            className="w-1/3 hover:w-full duration-500"
+            className="w-1/3 hover:w-full duration-500 rounded-lg"
           />
         )}
       </div>
