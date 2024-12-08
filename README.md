@@ -27,13 +27,13 @@ This project is a chat application developed with React, Firebase, Tailwind and 
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/ferhatkplnn/react-firebase-chat-app.git
+    git clone https://github.com/areebaqamar021/chatapp-firebase.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd react-firebase-chat-app
+    cd chatapp-firebase
     ```
 
 3. Install dependencies:
